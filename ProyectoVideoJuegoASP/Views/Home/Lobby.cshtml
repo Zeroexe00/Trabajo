@@ -1,0 +1,26 @@
+﻿@model IEnumerable<ProyectoVideoJuegoASP.Models.USUARIO>
+<h2>Lobby</h2>
+
+<table class="table table-bordered table-hover">
+
+    <thead>
+    <th>Nombre</th>
+    
+    </thead>
+
+
+    <tbody>
+        @foreach (ProyectoVideoJuegoASP.Models.USUARIO p in Model)
+        {
+
+            <tr>
+                <td>@Html.DisplayFor(m => p.nombre)</td>
+                
+
+                <td>@Html.ActionLink("Visualizar", "Ver", new { id = p.id })</td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>
